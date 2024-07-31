@@ -20,7 +20,7 @@
 
         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Title}" Padding="10,0" FontSize="Small" FontAttributes="Bold" />
         
-        <Label Grid.Row="1" Grid.Column="1" Text="{Binding PublishedAt, StringFormat='{0:MMMM d, yyyy}'}" Padding="10,0,0,0" FontSize="Micro" />
+        <Label Grid.Row="2" Grid.Column="1" Text="{Binding PublishedAt, StringFormat='{0:MMMM d, yyyy}'}" Padding="10,0,0,0" FontSize="Micro" />
 
         <Border Grid.Row="1" Grid.RowSpan="2" StrokeShape="RoundRectangle 15,15,15,15" Padding="0" Margin="0,0,0,0" BackgroundColor="#667788" >
             <Image Source="{Binding UrlToImage}" Aspect="AspectFill" HeightRequest="55" HorizontalOptions="Center" VerticalOptions="Center" />
