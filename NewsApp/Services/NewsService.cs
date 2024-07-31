@@ -12,8 +12,10 @@ namespace NewsApp.Services
     public class NewsService : INewsService, IDisposable
     {
         private bool disposedValue;
+
         const string UriBase = "https://newsapi.org/v2/";
-        readonly HttpClient httpClient = new () { BaseAddress = new(UriBase),
+        readonly HttpClient httpClient = new () { 
+            BaseAddress = new(UriBase),
             DefaultRequestHeaders = { { "user-agent", "maui-projects-news/1.0" } }
         };
 

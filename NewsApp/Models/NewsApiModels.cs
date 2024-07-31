@@ -7,10 +7,6 @@ using System.Text.Json.Serialization;
 
 namespace NewsApp.Models
 {
-    internal class NewsApiModels
-    {
-    }
-
     public class  Source
     {
         [JsonPropertyName("id")]
@@ -48,4 +44,5 @@ namespace NewsApp.Models
         public int TotalResults { get; set; }
         [JsonPropertyName("articles")]
         public List<Article> Articles { get; set; }
+    }
 }
