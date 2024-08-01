@@ -18,7 +18,7 @@ namespace NewsApp.ViewModels
 
         [ObservableProperty]
         private NewsResult currentNews;
-        public HeadlinesViewModel(INewsService newsService)
+        public HeadlinesViewModel(INewsService newsService, INavigate navigation) : base (navigation)
         {
             this.newsService = newsService;
         }
@@ -37,10 +37,11 @@ namespace NewsApp.ViewModels
         }
 
         [RelayCommand]
-        public void ItemSelected(object selectedItem)
+        public async Task ItemSelected(object selectedItem)
         {
             var selectedArticle = selectedItem as Article;
             var url = HttpUtility.UrlEncode(selectedArticle.Url);
+            await Navigation.NavigateTo($"articleview?url={url}");
         }
     }
 }
